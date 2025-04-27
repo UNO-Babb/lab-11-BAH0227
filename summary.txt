@@ -1,0 +1,21 @@
+the things I changed about the code included increasing the checker items to 15 items a minute, which I believe is doable with a bagger.
+I added the following data to processdata:
+
+        timeloss = (2*totalWait + idleTime) - this is a weighted average I used to calculate the amount of time lost, I figure that customer 
+        wait time is more important than checker idle time, which is why it is weighted higher
+
+        timebalance = totalWait/ idleTime - this was added because in some of the similuations with a lower amount of checkers, the amount of lost time was 
+        not that high, but that is because idle time was just so low that it was throwing off the data. I tried to aim to have this value be about .5
+
+        I also better displayed total wait time and the total amount of shoppers.
+
+In the end my data was roughly the following:
+    The average wait time was 3.74 minutes.
+    The total wait time was 288 minutes.
+    The total idle time was 612 minutes
+    the total time loss is 1188 minutes
+    the balance of time is 0.47
+    The total amount of shoppers was 77
+
+In my simulations, five checkers appeared to be the sweet spot for customer efficiency, while not causing a super high amount of time loss
+there is obviously still subjectivity to what the right answer is for the amount of checkers.
